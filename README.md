@@ -58,14 +58,13 @@ Put latex.el in your postload
 
 Add these to your org file.
 
-#+Options: num:nil, toc:nil
-#+LATEX_CLASS: article
-#+LaTeX_HEADER: \usepackage{minted}
+LaTeX_HEADER: \usepackage{minted}
 
-#+latex_compiler: xelatex
+latex_compiler: xelatex
 
-#+LaTeX_HEADER: \usepackage{libertine}
+LaTeX_HEADER: \usepackage{libertine}
+Latex_Header: \usepackage[none]{hyphenat}
 
+Latex_Header: \usepackage[british, greek]{babel}
 \sloppy
-#+LaTeX_CLASS_OPTIONS: [article,letterpaper,times,12pt,listings-bw,microtype]
 
