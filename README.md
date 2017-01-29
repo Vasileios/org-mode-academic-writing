@@ -51,3 +51,21 @@ If you want to use the english dictionary in a particular buffer instead,
 put the following on the first line of the buffer:
 
 `-*- ispell-dictionary: "english" -*-`
+
+# Export in Greek Language
+
+Put latex.el in your postload
+
+Add these to your org file.
+
+#+Options: num:nil, toc:nil
+#+LATEX_CLASS: article
+#+LaTeX_HEADER: \usepackage{minted}
+
+#+latex_compiler: xelatex
+
+#+LaTeX_HEADER: \usepackage{libertine}
+
+\sloppy
+#+LaTeX_CLASS_OPTIONS: [article,letterpaper,times,12pt,listings-bw,microtype]
+
