@@ -63,8 +63,10 @@ LaTeX_HEADER: \usepackage{minted}
 latex_compiler: xelatex
 
 LaTeX_HEADER: \usepackage{libertine}
+
 Latex_Header: \usepackage[none]{hyphenat}
 
 Latex_Header: \usepackage[british, greek]{babel}
+
 \sloppy
 
