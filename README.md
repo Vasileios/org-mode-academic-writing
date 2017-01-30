@@ -5,7 +5,7 @@ notes about exporting, using dictionaries, etc
 
 # Install Dictionaries -emacs
 
-**Install aspell from brew**
+**Install aspell using brew**
 
     $ brew install aspell --with-lang-en --with-lang-el --with-lang-de
 
