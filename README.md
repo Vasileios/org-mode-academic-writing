@@ -3,7 +3,7 @@ notes about exporting, using dictionaries, etc
 
 # Use dictionaries (Greek-English-German etc).
 
-# Install Dictionaries -emacs
+# Install Dictionaries -org-mode-emacs
 
 **Install aspell using brew**
 
