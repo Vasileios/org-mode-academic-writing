@@ -70,3 +70,48 @@ Latex_Header: \usepackage[british, greek]{babel}
 
 \sloppy
 
+
+# Export references with org-mode
+
+Use bibtex package for citation.
+
+First put the bellow code in your ./emacs
+
+    ;; Bibtex-latex export citation
+    (setq org-latex-pdf-process
+          '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+Your next step is to create a .bib file with your citations and name it: `test-bib-refs`
+
+i.e:
+
+    @InProceedings{ alejandro_weinstein-proc-scipy-2016,
+      author    = { {A}lejandro {W}einstein and {W}ael {E}l-{D}eredy and {S}téren {C}habert and {M}yriam {F}uentes },
+      title     = { {F}itting {H}uman {D}ecision {M}aking {M}odels using {P}ython },
+      booktitle = { {P}roceedings of the 15th {P}ython in {S}cience {C}onference },
+      pages     = { 1 - 6 },
+      year      = { 2016 },
+      editor    = { {S}ebastian {B}enthall and {S}cott {R}ostrup }
+    }
+
+and then use these latex commands inside your org file
+
+    #+LaTeX_HEADER: \usepackage[natbib]{biblatex}
+    #+LATEX_HEADER: \bibliographystyle{plain}
+    #+LATEX_HEADER: \bibliography{test-bib-refs}
+
+# Tests
+
+## Test1 slide
+
+-   This is test1 \cite{alejandro_weinstein-proc-scipy-2016}.
+-   This is test2 \cite{2011ApJS..192....9T}.
+
+\*
+\printbibliography
+
+## Note
+
+put `\printbibliography` at the end so as to print the references section last on your text.
+
+
