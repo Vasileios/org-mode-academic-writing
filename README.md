@@ -81,9 +81,9 @@ First put the bellow code in your ./emacs
     (setq org-latex-pdf-process
           '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
 
-Your next step is to create a .bib file with your citations and name it: `test-bib-refs`
+Your next step is to create a .bib file with your citations and name it. i.e: `test-bib-refs`
 
-i.e:
+
 
     @InProceedings{ alejandro_weinstein-proc-scipy-2016,
       author    = { {A}lejandro {W}einstein and {W}ael {E}l-{D}eredy and {S}téren {C}habert and {M}yriam {F}uentes },
